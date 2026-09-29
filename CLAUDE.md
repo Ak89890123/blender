@@ -2,6 +2,10 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Language
+
+與使用者互動時一律使用繁體中文（回覆、說明、提問、PR 描述皆同）。程式碼、程式碼註解與 commit 訊息維持英文，以符合上游 Blender 的慣例。
+
 ## Repository context
 
 - This is a **GitHub mirror** of Blender. Development, code review and the bug tracker live on <https://projects.blender.org>; see `.github/README.md` and `.gitea/pull_request_template.yaml`. Cloning the mirror can hit Git LFS errors; use `GIT_LFS_SKIP_SMUDGE=1` for the initial clone.
