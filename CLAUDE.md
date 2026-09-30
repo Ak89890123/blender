@@ -11,6 +11,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - This is a **GitHub mirror** of Blender. Development, code review and the bug tracker live on <https://projects.blender.org>; see `.github/README.md` and `.gitea/pull_request_template.yaml`. Cloning the mirror can hit Git LFS errors; use `GIT_LFS_SKIP_SMUDGE=1` for the initial clone.
 - The upstream PR template links to a policy on AI-assisted contributions (developer.blender.org handbook, "contributing/ai_contributions"). Check it before preparing anything for upstream.
 - Commit subjects follow `Area: Subarea: Description` (e.g. `EEVEE: Allow reference spheres to scale down with camera zoom`, `Fix: Grease Pencil: Carver tool locked materials`, `Fix #164389: EEVEE: ...`). Match this style.
+- `3d-print-models/` holds the user's 3D-print model files and is not Blender source. Its own `.gitattributes` turns Git LFS off for model formats (the root file maps them to LFS), so they are plain blobs: GitHub rejects files over 100 MB, and the browser uploader accepts at most 25 MB per file. Keep source code, formatting and checks out of that folder.
 - Precompiled libraries live in `lib/<os>_<arch>` git submodules configured with `update = none`. They are empty until `make update` enables and fetches them (needs access to projects.blender.org). Without them, a build needs system-installed dependencies or `make deps`. Test data in `tests/files/` is tracked in this repo (many binary types are Git LFS, see `.gitattributes`).
 
 ## Build
