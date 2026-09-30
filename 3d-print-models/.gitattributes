@@ -1,0 +1,19 @@
+# Store model files in this folder as plain Git blobs instead of Git LFS.
+#
+# The repository root maps many of these extensions to Git LFS (see ../.gitattributes).
+# Overriding that here lets browser uploads and a plain `git push` work without git-lfs.
+# `binary` also disables line-ending conversion and text diffs.
+#
+# Limits without LFS: GitHub rejects any single file over 100 MB, and the browser
+# uploader accepts at most 25 MB per file.
+*.stl binary -filter
+*.3mf binary -filter
+*.obj binary -filter
+*.ply binary -filter
+*.blend binary -filter
+*.fbx binary -filter
+*.glb binary -filter
+*.gltf binary -filter
+*.png binary -filter
+*.jpg binary -filter
+*.zip binary -filter
